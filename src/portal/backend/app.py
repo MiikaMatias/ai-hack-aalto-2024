@@ -11,7 +11,7 @@ def serve(path):
     else:
         return send_from_directory('frontend/build', 'index.html')
 
-@app.route('/upload_rfp', methods=['POST'])
+@app.route('/upload_proposal', methods=['POST'])
 def upload_file():
     if 'file' not in request.files:
         return jsonify({"error": "No file part"}), 400

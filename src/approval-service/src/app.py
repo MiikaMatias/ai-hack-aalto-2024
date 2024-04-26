@@ -1,6 +1,5 @@
 from flask import Flask, request, jsonify
 from proposal_maker import get_proposals
-import os
 
 app = Flask(__name__)
 
@@ -14,7 +13,6 @@ def upload_file():
         return jsonify({"error": "No file part"}), 400
     file = request.files['file']
     return get_proposals(file)
-
 
 if __name__ == "__main__":
     app.run(host='0.0.0.0', port=6000)

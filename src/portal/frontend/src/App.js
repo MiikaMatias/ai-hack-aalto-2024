@@ -1,14 +1,7 @@
 import './App.css';
 import React, { useState } from 'react';
-
-function FileUploadBox({ id }) {
-  return (
-    <div className="queue-box">
-      <label htmlFor={`file-upload-${id}`}>File {id}</label>
-      <input id={`file-upload-${id}`} type="file" />
-    </div>
-  );
-}
+import FileUploadBox from './components/FileUploadBox';
+import AcceptedProposalBox from './components/AcceptedProposalBox';
 
 function IncomingProposalBox({ id, filename }) {
   return (
@@ -21,16 +14,13 @@ function IncomingProposalBox({ id, filename }) {
   );
 }
 
-function AcceptedProposalBox({ id }) {
+function PendingProposalBox({ id }) {
   return (
     <div className="queue-box">
       <label htmlFor={`file-upload-${id}`}>Approved Proposal: {id}</label>
       <button className="btn" onClick={() => {
           console.log('TODO: Download the the sent file')
         }}>Download sent file</button>
-      <button className="btn" onClick={() => {
-          console.log('TODO: Download the accepted proposal')
-        }}>Download accepted proposal</button>
     </div>
   );
 }
@@ -42,10 +32,10 @@ function CustomerView({ status }) {
       <p>Interested in a machine learning solution for your business? Send a proposal and we'll respond back in a jiffy!</p>
       <div className="split-view">
       <div className="left-view-inside">
-
           Uploading proposals:
             <FileUploadBox id={1}/>
-          My proposals:
+          Pending proposals:
+          Accepted proposals:
             <AcceptedProposalBox id={1} status={status}/>
       </div>
       </div>
