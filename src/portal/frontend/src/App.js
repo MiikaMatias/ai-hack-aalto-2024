@@ -10,7 +10,7 @@ function FileUploadBox({ id }) {
   );
 }
 
-function DownloadLinkBox({ id, filename }) {
+function IncomingProposalBox({ id, filename }) {
   return (
     <div className="queue-box">
       <span>File {id}: {filename}</span>
@@ -25,23 +25,29 @@ function AcceptedProposalBox({ id }) {
   return (
     <div className="queue-box">
       <label htmlFor={`file-upload-${id}`}>Approved Proposal: {id}</label>
-      <input id={`file-upload-${id}`} type="file" />
+      <button className="btn" onClick={() => {
+          console.log('TODO: Download the the sent file')
+        }}>Download sent file</button>
+      <button className="btn" onClick={() => {
+          console.log('TODO: Download the accepted proposal')
+        }}>Download accepted proposal</button>
     </div>
   );
 }
 
-function CustomerView() {
+function CustomerView({ status }) {
   return (
     <div className="CustomerView">
       <h2>Customer Side</h2>
       <p>Interested in a machine learning solution for your business? Send a proposal and we'll respond back in a jiffy!</p>
       <div className="split-view">
-          <div className="left-view-inside">
+      <div className="left-view-inside">
+
+          Uploading proposals:
             <FileUploadBox id={1}/>
-          </div>
-          <div className="right-view-inside">
-            <AcceptedProposalBox id={1} />
-          </div>
+          My proposals:
+            <AcceptedProposalBox id={1} status={status}/>
+      </div>
       </div>
     </div>
   );
@@ -53,9 +59,7 @@ function ListOfIncomingProposals(setCurrentReport) {
     <p>Here are incoming proposals!</p>
     <div className="split-view">
     <div className="left-view-inside">
-      <DownloadLinkBox id={1} filename="Report1.docx" setCurrentReport={setCurrentReport} />
-      <DownloadLinkBox id={2} filename="Report2.docx" setCurrentReport={setCurrentReport}/>
-      <DownloadLinkBox id={3} filename="Report3.docx" setCurrentReport={setCurrentReport}/>
+      <IncomingProposalBox id={1} filename="Report1.docx" setCurrentReport={setCurrentReport} />
     </div>
     </div>
     </div>

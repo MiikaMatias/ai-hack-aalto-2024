@@ -1,0 +1,53 @@
+**Request for Proposal**
+
+**Project Title**: Image Generation Integration using Generative AI for Chat Messaging App
+
+**Issuing Company**: Chatify Technologies Inc.
+
+**Location**: San Francisco, CA
+
+**Deadline for Proposal Submission**: June 15, 2024
+
+**1. Project Overview:**
+Chatify Technologies Inc. is inviting proposals for the integration of Generative AI technology into our chat messaging app to enable automated image generation. The objective is to enhance user engagement and interaction by allowing users to generate and share dynamic images directly within the chat interface.
+
+**2. Project Scope:**
+The selected vendor will be responsible for:
+- Developing and implementing a Generative AI model capable of generating images based on text input or user prompts.
+- Integrating the image generation functionality seamlessly into our existing chat messaging app infrastructure.
+- Providing options for customization and personalization of generated images, such as style, content, and context.
+- Ensuring scalability and performance optimization to support a large user base and real-time image generation.
+
+**3. Technical Requirements:**
+The proposed solution should:
+- Support various image generation tasks, including creating illustrations, emojis, memes, and personalized avatars.
+- Utilize state-of-the-art Generative AI techniques.
+- Enable users to interact with the AI model through natural language input or graphical interfaces.
+- Include mechanisms for controlling image quality, diversity, and novelty based on user preferences.
+- Integrate seamlessly with our chat messaging app's existing features and user interface design.
+
+**4. Evaluation Criteria:**
+Proposals will be evaluated based on the following criteria:
+- Experience and expertise in developing Generative AI solutions for image generation tasks.
+- Understanding of user experience (UX) design principles and best practices for integrating AI-driven features into chat applications.
+- Technical approach and methodology for model development, integration, and performance optimization.
+- Demonstrated ability to ensure security, privacy, and compliance with data protection regulations.
+- Cost-effectiveness and scalability of the proposed solution.
+
+**5. Submission Guidelines:**
+Interested vendors are requested to submit their proposals electronically to [email protected] no later than the deadline specified above. Proposals should include:
+- Company profile and relevant experience in AI development and chat application development.
+- Technical architecture and implementation plan for the proposed image generation integration.
+- Project timeline, milestones, and deliverables.
+- Cost estimate, including licensing fees, implementation costs, and ongoing support/maintenance.
+- References from previous clients/projects in the AI and chat messaging app domains.
+
+**6. Contact Information:**
+For inquiries or clarification regarding this RFP, please contact:
+John Smith
+Product Manager
+Chatify Technologies Inc.
+Email: [email protected]
+Phone: +1 (555) 789-0123
+
+Chatify Technologies Inc. reserves the right to reject any or all proposals received and to negotiate separately with selected vendors. Submission of a proposal indicates acceptance of the terms outlined in this RFP. We look forward to receiving your proposals.
