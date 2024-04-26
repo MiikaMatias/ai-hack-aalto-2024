@@ -1,0 +1,91 @@
+.App {
+  text-align: center;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.split-view {
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
+  border-left: none; /* Ensuring no double border */
+}
+
+.left-view-inside {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  box-sizing: border-box; /* Ensures padding is included in width */
+}
+
+
+.right-view-inside {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 15px;
+  box-sizing: border-box; /* Ensures padding is included in width */
+}
+
+.left-view-outside {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 15px;
+  box-sizing: border-box; /* Ensures padding is included in width */
+  border: 2px solid #ccc;
+}
+
+.right-view-outside {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  box-sizing: border-box; /* Ensures padding is included in width */
+  border: 2px solid #ccc;
+}
+
+.queue-box {
+  width: 70%;
+  margin: 10px;
+  padding: 20px;
+  border: 2px solid #ccc;
+  box-shadow: 0px 4px 6px rgba(0,0,0,0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+.btn {
+  padding: 8px 16px;
+  margin: 5px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.btn:hover {
+  background-color: #0056b3;
+}
+

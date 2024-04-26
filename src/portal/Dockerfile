@@ -4,6 +4,8 @@ WORKDIR /app
 
 COPY ./backend /app
 
+COPY ./frontend/build /app/frontend/build
+
 RUN pip install --upgrade flask werkzeug
 RUN pip install --no-cache-dir -r requirements.txt
 
