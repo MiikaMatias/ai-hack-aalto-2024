@@ -7,13 +7,8 @@ Automating RFP processing and dispatching proposals to customers through generat
 graph LR
     Customer -->|RFP| API
     API -->|RFP| RFP_processor
-    RFP_processor -->|RFP| RFP_parser
-    RFP_processor -->|parsed-file-struct| Catalogue_extractor
-    RFP_processor -->|extracted items| Approval_service
-    RFP_parser --> |parsed-file-struct|RFP_processor
-    Catalogue_extractor --> |extracted items| RFP_processor
-    Catalogue_extractor -->|request for relevant data| Catalogue_database
-    Catalogue_database -->|relevant data| Catalogue_extractor
+    RFP_processor -->|RFP| RFP_to_model
+    RFP_to_model --> |AI model|Approval_service
     Approval_service -->|proposal| RFP_processor
     RFP_processor --> |proposal| API
 ```
