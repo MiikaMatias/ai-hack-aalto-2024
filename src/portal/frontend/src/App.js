@@ -1,4 +1,5 @@
 import './App.css';
+import React, { useState } from 'react';
 
 function FileUploadBox({ id }) {
   return (
@@ -13,9 +14,9 @@ function DownloadLinkBox({ id, filename }) {
   return (
     <div className="queue-box">
       <span>File {id}: {filename}</span>
-      <a href="#" download>Download</a>
-      <button className="btn" onClick={() => console.log('Modify clicked', id)}>Check</button>
-      <button className="btn" onClick={() => console.log('Accept clicked', id)}>Accept</button>
+      <button className="btn" onClick={() => {
+          console.log('TODO: Go to details of id', id)
+        }}>Details</button>
     </div>
   );
 }
@@ -46,18 +47,45 @@ function CustomerView() {
   );
 }
 
+function ListOfIncomingProposals(setCurrentReport) {
+  return (
+    <div>
+    <p>Here are incoming proposals!</p>
+    <div className="split-view">
+    <div className="left-view-inside">
+      <DownloadLinkBox id={1} filename="Report1.docx" setCurrentReport={setCurrentReport} />
+      <DownloadLinkBox id={2} filename="Report2.docx" setCurrentReport={setCurrentReport}/>
+      <DownloadLinkBox id={3} filename="Report3.docx" setCurrentReport={setCurrentReport}/>
+    </div>
+    </div>
+    </div>
+  );
+}
+
+function ShowIncomingProposal({reportNumber}) {
+  // TODO: get data from the reportNumber
+  return (
+    <div>
+      {reportNumber}
+      <button className="btn" onClick={() => {
+          console.log("TODO: go to business view")
+        }}>Go back</button>
+      <button className="btn btn-success" onClick={() => {
+          console.log("TODO: approve it and go to business view")
+        }}>Approve</button>
+
+    </div>
+  )
+}
+
 function BusinessView() {
+  const [currentReport, setCurrentReport] = useState(0);
+
   return (
     <div className="BusinessView">
       <h2>Business Side</h2>
-      <p>Here are incoming proposals!</p>
-      <div className="split-view">
-          <div className="left-view-inside">
-            <DownloadLinkBox id={1} filename="Report1.docx" />
-            <DownloadLinkBox id={2} filename="Report2.docx" />
-            <DownloadLinkBox id={3} filename="Report3.docx" />
-          </div>
-      </div>
+      // TODO: make routing maybe
+      {currentReport == 0 ? <ListOfIncomingProposals /> : <ShowIncomingProposal reportNumber={currentReport}/>}
     </div>
   );
 }
