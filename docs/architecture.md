@@ -1,4 +1,7 @@
+# Problem statement 
+Automating RFP processing and dispatching proposals to customers through generative ai
 
+## Service architecture
 
 ```mermaid  
 graph LR
